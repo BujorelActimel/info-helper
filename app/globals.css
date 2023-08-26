@@ -5,6 +5,7 @@
 html, 
 body, 
 :root {
+  background-image: linear-gradient(to right bottom, #1c2738, #1d303f, #203845, #24414b, #2a494f);
   height: 100%;
 }
 
