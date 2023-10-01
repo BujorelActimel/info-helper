@@ -2,8 +2,16 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar"
+import { currentUser } from "@clerk/nextjs"
+import { redirect } from 'next/navigation'
 
-export default function Landing() {
+export default async function Landing() {
+  const user = await currentUser()
+
+  if (user) {
+    redirect("/dashboard")
+  }
+
   return (
     <>
       <Navbar />
@@ -30,8 +38,8 @@ export default function Landing() {
           <Image
             src="/hero-final.jpg"
             alt="hero"
-            width={800}
-            height={800}
+            width={500}
+            height={500}
             quality={100}
           />
         </div>

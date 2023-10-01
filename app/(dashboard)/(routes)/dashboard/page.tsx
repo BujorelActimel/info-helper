@@ -1,6 +1,7 @@
 import { UserButton } from "@clerk/nextjs"
+import Sidebar from "@/components/Sidebar"
 
-const DashboardPage = () => {
+export default function DashboardPage() {
   return (
     <div>
       <h1 className="text-white">Dashboard Page (users-only)</h1>
@@ -8,5 +9,3 @@ const DashboardPage = () => {
     </div>
   )
 }
-
-export default DashboardPage
